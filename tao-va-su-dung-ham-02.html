@@ -33,6 +33,11 @@
     <label id="result3"></label>
 
     <h1>Bài 4</h1>
+    <p>Kiểm tra xem ký tự nhập vào có phải là ký tự số không?</p>
+    <input id="input4" type="text" />
+    <button type="button" onclick="bai4()">Kiểm tra</button>
+    <br>
+    <label id="result4"></label>
     <script>
         // Bài 1
         function bai1() {
@@ -68,8 +73,17 @@
         
         // Bài 4
         function bai4() {
-
+            let input4 = Number(document.getElementById("input4").value);
+            let result = !isNaN(input4);
+            if (result) {
+                document.getElementById("result4").innerHTML = "Đây là ký tự số";
+            } else {
+                document.getElementById("result4").innerHTML = "Không phải là số";
+            }
+            return result;
         }
+
+
     </script>
 </body>
 </html>
