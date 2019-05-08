@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tạo vào sử dụng hàm 02</title>
+</head>
+<body>
+    <h1>Bài 1</h1>
+    <p>Tính bình phương của số bất kỳ</p>
+    <input id="input1" type="number" placeholder="Nhập vào một số"/>
+    <button type="button" onclick="bai1()">Tính bình phương</button>
+    <br>
+    <label id="result1"></label>
+
+    <h1>Bài 2</h1>
+    <p>Tính diện tích, chu vi hình tròn</p>
+    <input id="input2" type="number" placeholder="Nhập vào đường kính"/>
+    <button type="button" onclick="bai21()">Tính chu vi</button>
+    <button type="button" onclick="bai22()">Tính diện tích</button>
+    <br>
+    <label id="result21"></label>
+    <br>
+    <label id="result22"></label>
+
+    <h1>Bài 3</h1>
+    <p>Tính giai thừa của số nguyên dương</p>
+    <input id="input3" type="number" placeholder="Nhập vào số nguyên dương"/>
+    <button type="button" onclick="bai3()">Tính giai thừa</button>
+    <br>
+    <label id="result3"></label>
+
+    <h1>Bài 4</h1>
+    <script>
+        // Bài 1
+        function bai1() {
+            let number = document.getElementById("input1").value;
+            document.getElementById("result1").innerHTML = "Result: " + (number * number);
+        }
+        
+        // Bài 2
+        function bai21() {
+            let input21 = document.getElementById("input2").value;
+            document.getElementById("result21").innerHTML = "Chu vi hình tròn là: " + (input21 * 3.14);
+        }
+
+        function bai22() {
+            let input22 = document.getElementById("input2").value;
+            document.getElementById("result22").innerHTML = "Diện tích hình tròn là: " + (((input22 * input22)/4) * 3.14);
+        }
+
+        // Bài 3
+        function bai3() {
+            let input3 = document.getElementById("input3").value;
+            let total = 1;
+            if (input3 >= 0) {
+                for (let i = 1; i <= input3; i++) {
+                    total *= i;
+                    document.getElementById("result3").innerHTML = "Giai thừa của " + input3 + " là " + total;
+                }
+            }
+            else {
+                document.getElementById("result3").innerHTML = "Vui lòng nhập vào số nguyên dương";
+            }
+        }
+        
+        // Bài 4
+        function bai4() {
+
+        }
+    </script>
+</body>
+</html>
