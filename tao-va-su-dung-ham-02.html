@@ -167,17 +167,18 @@
         function bai9() {
             let input91 = document.getElementById("input91").value;
             let input92 = document.getElementById("input92").value;
-            input91 = input91.split("");
-            console.log(input91);
             let count = 0;
             for (let i = 0; i < input91.length; i++) {
-                if (input92 == input91[i]) {
+                if (input91[i] == input92) {
                     count++;
-                    document.getElementById("result9").innerHTML = "Có " + count + " ký tự " + input92 + " trong mảng";
-                } else {
-                    document.getElementById("result9").innerHTML = "Không có ký tự " + input92 + " trong mảng";
-                    return -1;
                 }
+            }
+            document.getElementById("result9").innerHTML = "Có " + count + " ký tự " + input92 + " trong mảng";
+            if (count == 0) {
+                document.getElementById("result9").innerHTML = "Không có ký tự " + input92 + " trong mảng";
+                return -1;
+            } else {
+                return count;
             }
         }
     </script>
